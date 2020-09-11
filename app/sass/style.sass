@@ -1,0 +1,956 @@
+@import "vars"
+@import "fonts"
+
+//---start global style----
+body 
+	color: $grey
+	font-size: 4.800vw
+	font-family: $nunito
+	margin: 0 
+	padding: 0
+	position: relative
+	padding-bottom: 100.938vw
+	min-height: 100vw
+.container
+	max-width: 90%
+	margin: 0 auto
+ul 
+	list-style: none
+	padding-left: 0
+	margin-bottom: 0 
+	margin-top: 0
+	margin-right: 0
+a 
+	text-decoration: none
+h2 
+	font-family: $nunito
+	font-weight: 600
+	font-size: 7.4vw
+	margin-top: 0 
+	margin-bottom: 0
+	line-height: 1.2
+	color: $grey
+	margin-bottom: 4vw
+	text-align: center
+h2.sm 
+	font-size: 5vw
+
+h3 
+	margin-top: 0
+	margin-bottom: 0
+	font-size: 7vw
+	color: $black
+	font-weight: 300 
+	font-family: $nunito
+h4 
+	font-family: $nunito
+	font-weight: 600
+	font-size: 6.4vw
+	margin-top: 0 
+	margin-bottom: 0
+	line-height: 1.2
+	color: $grey
+	margin-bottom: 4vw
+	text-align: center
+h5 
+	color: $black 
+	font-size: 6vw 
+	font-weight: 600
+	margin-top: 3vw 
+	margin-bottom: 3vw
+h6 
+	font-size: 4.5vw
+	font-family: $nunito
+	font-weight: 400 
+	color: $grey
+	margin-top: 3vw 
+	margin-bottom: 0
+main 
+	padding-top: 20vw
+	p 
+		font-size: 4vw
+	h3 
+		font-size: 5.6vw
+input 
+	width: 100%
+	height: 12.994vw
+	border-radius: 1vw
+	border: 1px solid #ebebeb
+	background-color: #fafafa
+	font-weight: 300
+	line-height: 36px
+	font-family: "Open Sans",sans-serif
+	box-sizing: border-box
+	padding: 5vw
+	outline: none
+	font-size: 4.8vw
+input::placeholder 
+	color: #999999
+input:focus::placeholder
+	color: transparent
+input[type="submit"]
+	height: 15.938vw
+	display: flex 
+	align-items: center
+	justify-content: center
+	line-height: 1
+.red 
+	color: #fe6354
+.blue 
+	color: #2a81e3
+.aqua 
+	color: $aqua
+.purple 
+	color: #ba16db
+.pink 
+	color: #f56875
+.new-game-label
+	position: absolute
+	background: linear-gradient(rgb(222,49,239) 0%,rgb(186,22,219) 100%)
+	color: #fff
+	padding: 1vw 3vw
+	border-radius: 7vw
+	transform: translate(-35%, -25%)
+	font-family: 'Nunito', sans-serif
+	font-weight: 700
+.button,
+.button a 
+	color: #fff 
+	background: $aqua
+	display: inline-block
+	padding: 3vw 10vw
+	border-radius: 1vw
+	font-family: $nunito
+	font-weight: 600
+	font-size: 7.4vw
+.button-sm,
+.button-sm a
+	font-size: 5.8vw
+	margin-top: 8vw
+.sub-title 
+	text-align: center
+.p-sm 
+	font-size: 4.1vw
+	max-width: 80vw
+	margin: 0 auto
+	text-align: left
+	margin-top: 2vw
+//---end global style------
+
+//---start header style--------
+.header 
+	position: fixed
+	width: 100%
+	padding-top: 3vw
+	padding-bottom: 3vw
+	transition: all .5s
+	z-index: 1000
+	.logo-img 
+		width: 0
+.header.sticky
+	box-shadow: 0 0 15px 1px #dfdfdf
+	padding-top: 1vw
+	padding-bottom: 1vw
+	background: #fff
+	.logo-img 
+		width: 18vw
+		margin-right: 3vw
+
+
+
+.header__logo 
+	display: flex 
+	align-items: center
+	svg 
+		width: 30vw
+	.logo-color
+		fill: $aqua
+.header.active,
+.header.sticky.active 
+	background: $aqua
+	height: 100vh
+	overflow-y: auto
+	box-shadow: none
+	padding-top: 3vw
+	padding-bottom: 5vw
+	.logo-img 
+		width: 0
+		margin-right: 0
+	.header__logo
+		.logo-color
+			fill: #fff
+	.menu 
+		display: flex
+
+.btn__menu 
+	cursor: pointer
+
+.btn__menu-row	
+	background: $aqua
+	width: 8vw
+	height: 1vw
+	margin-bottom: 1vw
+	transition: all .5s
+.btn__menu-row:last-child 
+	margin-bottom: 0
+.header 
+	.container
+		display: flex 
+		justify-content: space-between 
+		align-items: center
+.btn__menu.active
+	.btn__menu-row
+		background: #fff
+	.btn__menu-row:first-child 
+		display: none
+	.btn__menu-row:last-child 
+		transform: rotate(45deg)
+	.btn__menu-row:nth-child(2)
+		transform: rotate(-45deg)
+		margin-bottom: 0
+		position: relative 
+		top: 1vw
+.menu 
+	display: none
+	margin-top: 15vw
+	li 
+		padding-bottom: 3vw
+		text-align: center
+		width: 100%
+	a 
+		color: #fff
+		font-size: 8vw
+	.menu-btn
+		a
+			color: $aqua
+			background: #fff
+			display: flex 
+			justify-content: center 
+			align-items: center
+			padding: 3vw 10vw
+			border-radius: 1vw
+			margin-top: 10vw
+.menu__group
+	margin-bottom: 4vw
+
+//--end header style---------
+
+//----start main screen style-----
+.main-screen
+	padding-top: 25vw
+	h2 
+		margin-bottom: 10vw
+.main-screen__images
+	
+.main-screen__img-wrapper
+	display: flex
+	justify-content: center
+	img 
+		width: 50vw
+		max-width: 50vw
+		min-width: 50vw
+		height: 92.500vw
+		max-height: 92.500vw
+		min-height: 92.500vw
+.main-screen__img-wrapper.active 
+	display: flex
+.img-wrapper
+	position: relative
+	margin-top: 3vw
+
+.main-screen__content
+	margin-bottom: 10vw
+	img 
+		width: 30vw
+.main-text
+	margin-top: 3vw
+.main-screen__content
+	padding-top: 7vw
+.main-screen__text
+	font-weight: 300 
+	font-family: $nunito
+	margin-bottom: 14vw
+	font-size: 4.7vw
+	text-align: center
+	span 
+		font-weight: 700
+.button-wrapper
+	text-align: center
+	display: flex
+	flex-direction: column
+
+.main-screen__video-link
+	margin-top: 3vw
+	font-size: 3.8vw
+.main-screen__video-link:hover 
+	text-decoration: underline
+//----end main screen style-------
+
+
+//-----start text section style----
+.text-section
+	padding-top: 10vw
+	padding-bottom: 10vw
+.text-section__line
+	width: 30vw
+	height: 1px 
+	background: $aqua
+	margin: 0 auto
+	margin-top: 10vw
+//-----end text section style--------
+
+//-----start how it works style----
+.how-it-works
+	text-align: center
+.how-it-works__num
+	font-size: 8.4vw
+	font-family: $nunito 
+	font-weight: 600 
+	color: #fff 
+	background: #eb533c
+	width: 18vw 
+	height: 18vw
+	display: flex
+	justify-content: center 
+	align-items: center
+	margin: 0 auto
+	border-radius: 50%
+	margin-bottom: 4vw
+.how-it-works__item
+	padding-top: 10vw
+	
+.how-it-works__text 
+	max-width: 60vw
+	margin: 0 auto
+.how-it-works__num--blue
+	background: #3795e9
+.how-it-works__num--aqua
+	background: $aqua
+.how-it-works__num--purple
+	background: #a319b8
+//-----end hoe it works style------
+
+// start features section
+.features
+	text-align: center
+	padding-top: 0vw 
+	padding-bottom: 10vw
+.features__item-wrapper
+	//display: flex
+	text-align: left
+	//align-items: center
+	img 
+		float: left
+
+.features__item
+	padding-top: 10vw
+	h4
+		margin-bottom: 5vw
+		text-align: left
+
+	p 
+		max-width: 90vw 
+		margin: 0 auto
+.features__item-img
+	min-width: 20vw
+	margin-right: 5vw
+	img 
+		max-width: 15vw 
+		max-height: 15vw
+		padding: 2vw 4vw
+
+		
+// end features section
+
+// start Showcase style
+.showcase
+	padding-bottom: 14vw
+.showcase__items
+	display: flex 
+	flex-wrap: wrap 
+	justify-content: space-between
+.showcase__item
+	width: calc(33.3vw - 5vw)
+	box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1)
+    border: solid 1px #f7f7f7
+	padding: 2vw
+	box-sizing: border-box
+	margin-top: 14vw
+	color: $grey
+	img 
+		width: 100%
+	p 
+		font-size: 3.6vw
+		margin-bottom: 0vw
+		margin-top: 2vw
+		max-width: 100% 
+		overflow: hidden
+		white-space: nowrap
+		position: relative
+	p:after 
+		content: ''
+		background: linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,1))
+		height: 100% 
+		width: 30% 
+		position: absolute 
+		right: 0 
+		top: 0
+	span 
+		font-size: 3.2vw
+// end Showcase style
+
+// start check-this-game style
+.check-this-game
+	h2 
+		text-align: left
+		font-size: 7vw
+.check-this-game__top
+	margin-bottom: 4vw
+	//display: flex
+.arrow
+	width: 30vw
+	transform: rotate(-110deg)
+	position: relative 
+	top: -12vw
+
+.check-this-game__img
+	width: 100%
+	display: flex 
+	margin-bottom: 4vw
+	//justify-content: flex-end
+.world-img
+	width: 43vw
+	height: 43vw
+	max-width: 43vw
+	max-height: 43vw
+	min-width: 43vw
+	min-height: 43vw
+
+.game-wrapper
+	padding-top: 7vw 
+	img 
+		width: 90%
+		display: block 
+		margin: 0 auto
+// end check this game style
+
+//start types game style
+.types-game
+	padding-top: 10vw 
+.types-game__item
+	padding-top: 10vw
+
+	.text-section__line
+		margin-top: 10vw
+
+.types-game__img
+	width: 50vw 
+	margin: 0 auto
+	img 
+		width: 100%
+.types-game__item
+	h4 
+		text-align: center
+	p 
+		margin-top: 1vw
+//end types game style
+
+//start example style
+.example__items
+	display: flex 
+	flex-wrap: wrap
+	justify-content: space-between
+.example__item
+	width: 46%
+	padding-top: 10vw
+	img 
+		width: 100%
+	p 
+		font-size: 3.6vw
+		margin-top: 1vw
+//end example style
+
+//start make mony style
+.how-make-money__item
+	display: flex
+	align-items: center
+	padding-top: 10vw
+	p 
+		//padding-left: 5vw
+.how-make-money__img
+	min-width: 28vw 
+	display: flex 
+	justify-content: flex-start
+.how-make-money
+	padding-top: 10vw 
+	padding-bottom: 4vw
+	p 
+		max-width: 80vw
+//end make mony style
+
+//start networks style
+.networks
+	text-align: center
+.network__item
+	padding-top: 10vw
+	p 
+		font-size: 4.1vw
+	img 
+		//max-width: 28vw
+
+//end networks style
+
+//start building process
+.building-process
+	.sub-title
+		margin-bottom: 5vw
+.building-process__item
+	h4 
+		margin-bottom: 3vw
+		text-align: center
+	p 
+		margin-top: 3vw
+	img 
+		width: 100%
+.building-process__item
+	padding-top: 9vw
+//end building process
+
+//start competition style
+.competition
+	padding-top: 10vw
+	padding-bottom: 10vw
+	.sub-title 
+		text-align: left
+		padding-top: 10vw
+.competition__item
+	padding-top: 5vw
+	text-align: center
+	p 
+		text-align: left
+.competition__item-value
+	font-size: 15vw
+	border-bottom: 2vw solid #fe6354
+	font-family: $nunito
+	width: 40vw
+	margin: 0 auto
+	text-align: center
+.competition__item-value.blue 
+	color: #2a81e3
+	border-color: #2a81e3 
+.competition__item-value.aqua
+	border-color: $aqua
+//end competition style
+
+//start go-ahead style
+.go-ahead
+	padding-bottom: 10vw
+.go-ahead__item
+	display: flex
+	align-items: center
+	padding-top: 10vw
+	p 
+		margin-top: 0
+		padding-left: 5vw
+		margin-bottom: 0
+//end go-ahead style
+
+//start win style
+.win
+	padding-bottom: 20vw 
+	img 
+		width: 100%
+	h2 
+		span 
+			font-weight: bold
+	h2:first-child 
+		margin-bottom: 14vw
+//end win style
+
+//start footer
+.footer 
+	background: #f9f9f9
+	padding-top: 8vw
+	padding-bottom: 2vw
+	position: absolute 
+	bottom: 0 
+	left: 0
+.footer__menu 
+	display: flex
+	a 
+		display: block
+		margin-bottom: 3vw
+		font-size: 3.8vw
+		color: $grey
+.footer__menu-col
+	width: 50%
+.footer__social
+	padding-top: 8vw
+	padding-bottom: 8vw
+	display: flex 
+	justify-content: center
+	width: 100%
+	a 
+		margin-right: 3vw
+		margin-left: 3vw
+
+	img 
+		width: 12vw
+.footer-logo 
+	display: flex
+	margin-bottom: 1vw
+	justify-content: center
+	img:first-child  
+		width: 20vw
+	img:last-child 
+		width: 33vw
+.copy 
+	color: #bbc3c9
+	font-size: 3vw
+	padding-bottom: 2vw
+	text-align: center
+	a 
+		text-decoration: underline
+		color: #bbc3c9
+
+//end footer
+
+.cookie__table
+	width: 100% 
+	border: 1px solid $grey
+	font-size: 3.2vw
+.cookie__row
+	display: flex 
+	border-bottom: 1px solid $grey
+	.cookie__col
+		padding: 2vw
+	.cookie__col:first-child 
+		width: 30% 
+		border-right: 1px solid $grey
+	.cookie__col:last-child 
+		width: 70%
+.cookie__row:last-child 
+	border-bottom: none
+.cookie__row--header 
+	color: $black 
+	font-weight: 600
+.table
+	width: 100% 
+	border: 1px solid $grey
+	font-size: 3.2vw
+.table__row
+	display: flex
+	border-bottom: 1px solid $grey
+	.table__col:nth-child(2)
+		border-right: 1px solid $grey 
+		border-left: 1px solid $grey
+.table__col
+	width: 33.3%
+	padding: 2vw
+	max-width: 33.3% 
+	min-width: 33.3%
+.table__row:last-child 
+	border-bottom: none
+.slick-dots
+	display: flex
+	justify-content: center
+	padding-top: 3vw
+	li 
+		margin: 0 1vw
+		background: transparent
+		height: 2.5vw 
+		width: 2.5vw
+		border: 1px solid $aqua
+		border-radius: 50%
+		outline: none
+		cursor: pointe
+		button
+			padding: 0
+			font-size: 0
+			background: transparent
+			outline: none
+			color: transparent
+			border: none
+			
+	.slick-active
+		
+		background: $aqua
+.review
+	padding-top: 10vw 
+	padding-bottom: 10vw
+	h2 
+		margin-bottom: 10vw
+.es-title
+	display: none !important
+.testimonials
+	padding-top: 10vw
+	h2 
+		margin-bottom: 10vw
+	.button 
+		margin-top: 8vw
+		margin-bottom: 10vw
+.review.review--bottom
+	padding-top: 0
+	padding-bottom: 10vw
+
+//start registration style
+.registration__sub-title
+	font-family: $nunito
+	text-align: center
+	margin-bottom: 7vw
+	span 
+		font-weight: 600
+.reg-title
+	text-align: center
+	font-size: 4vw
+	font-weight: 600
+	color: $grey
+	margin-bottom: 7vw
+
+.google__btn
+	background-color: #f1f1f1
+	color: #566473
+	display: flex 
+	align-items: center
+	width: 100% 
+	border-radius: 1vw
+	padding: 3vw 10vw
+	box-sizing: border-box
+	font-weight: 300
+	margin-top: 5vw
+	text-align: center
+	justify-content: center
+	position: relative
+	img 
+		width: 7vw
+		height: 7vw
+		max-height: 7vw 
+		min-height: 7vw 
+		max-width: 7vw 
+		min-width: 7vw
+		position: absolute
+		left: 10vw
+		top: 50% 
+		transform: translateY(-50%)
+.google__btn:hover,
+.google__btn:focus,
+.google__btn:active	
+	background: #d8d8d8
+	color: #566473
+.vk__btn
+	background: #4c75a3
+	display: flex 
+	align-items: center
+	width: 100% 
+	border-radius: 1vw
+	padding: 3vw 10vw
+	box-sizing: border-box
+	font-weight: 300
+	color: #fff
+	margin-top: 5vw
+	text-align: center
+	justify-content: center
+	position: relative
+	img 
+		width: 10vw
+		max-height: 7vw 
+		min-height: 7vw 
+		max-width: 7vw 
+		min-width: 7vw
+		position: absolute
+		left: 10vw
+		top: 50% 
+		transform: translateY(-50%)
+.vk__btn:hover,
+.vk__btn:active,
+.vk__btn:focus
+	background: #3c5c80
+.fb__btn 
+	background: #3b5998
+	display: flex 
+	align-items: center
+	width: 100% 
+	border-radius: 1vw
+	padding: 3vw 10vw
+	box-sizing: border-box
+	font-weight: 300
+	color: #fff
+	margin-top: 5vw
+	text-align: center
+	justify-content: center
+	position: relative
+	img 
+		width: 7vw
+		max-height: 7vw 
+		min-height: 7vw 
+		max-width: 7vw 
+		min-width: 7vw
+		position: absolute
+		left: 10vw
+		top: 50% 
+		transform: translateY(-50%)
+.fb__btn:hover,
+.fb__btn:focus,
+.fb__btn:active	
+	background: #2d4373
+.or 
+	text-align: center
+	margin-top: 7vw 
+	margin-bottom: 7vw
+	position: relative
+	span
+		background: #fff
+		position: relative
+		padding: 0 2vw
+.or:before
+	content: ''
+	width: 100% 
+	height: 1px 
+	background: #dedede
+	display: block
+	top: 50%
+	left: 0
+	position: absolute
+	transform: translateY(50%)
+.input-wrapper
+	position: relative
+	margin-bottom: 5vw
+.error
+	color: red
+	position: absolute
+	right: 5vw
+	top: 50%
+	transform: translateY(-50%)
+	font-size: 4vw
+	text-align: center
+.invalid 
+	border: 1px solid red
+.button:hover,
+.button:focus,
+.button:active
+	background: #0db1a8
+.reg__footer
+	margin-top: 5vw
+	margin-bottom: 5vw
+	font-size: 3.5vw
+	a 
+		color: $aqua
+		font-weight: 600
+.reg__login
+	text-align: center 
+	margin-bottom: 10vw
+	a 
+		color: $aqua 
+		font-weight: 600
+.forgot-password
+	font-weight: 600 
+	color: $aqua
+	margin-top: 3vw
+	display: block	
+	font-size: 4vw
+	text-decoration: underline
+.reg__login--pass
+	margin-top: 5vw
+.reg-title--left
+	text-align: left
+	margin-bottom: 3vw
+.registration
+	padding-top: 2vw
+	h2 
+		margin-bottom: 5vw
+.g-recaptcha
+	margin-bottom: 5vw
+
+//end registration style
+
+.contant-form-password
+	width: 300px
+	margin: 0 auto
+//----start recapcha style---
+.container2
+	max-width: 304px
+.g-recaptcha
+	transform-origin: left top
+	-webkit-transform-origin: left top
+.reset-password
+	.container 
+		max-width: 94%
+//----end recapcha style-----
+
+//----start cookies popup 
+.cookies-popup 
+	background: #d4f2ec
+	font-size: 3.3vw
+	padding-bottom: 1.5vw
+	padding-top: 1.5vw
+	position: fixed 
+	bottom: 0 
+	left: 0 
+	width: 100%
+	display: none
+	.container 
+		max-width: 94%
+		display: flex
+	.button 
+		display: flex
+		align-items: center 
+		justify-content: center
+		width: 25vw
+		text-align: center
+		padding: 1.5vw 2vw
+		font-size: 3.3vw
+		margin-left: 1vw
+	a 
+		display: inline-block
+		color: inherit
+		text-decoration: underline
+.cookies-popup.active 
+	display: flex
+
+
+
+//----end cookies popup----
+.registration .button
+	-webkit-appearance: none
+	border-radius: 1vw
+	border: none
+	width: 100%
+	outline: none
+.warning
+	position: fixed 
+	bottom: 1vw
+	background: #c8302b
+	color: #fff 
+	right: 1vw
+	padding: 3vw 10vw
+	border-radius: 1vw
+	box-shadow: 0 0 5px rgba(#c8302b, 0.7)
+	transition: all 0.5s 
+	transform: translate(110%)
+.warning.active 
+	transform: translate(110%)
+	animation-name: pulse
+	animation-duration: 5s
+
+@keyframes pulse
+	0%
+		transform: translate(110%)
+	10%
+		transform: translate(0%)
+	90%
+		transform: translate(0%)
+	100% 
+		transform: translate(110%)
+.padding 
+	padding-top: 30vw
+.margin 
+	margin-top: 10vw
+.marin-bottom 
+	margin-bottom: 10vw
+
+@import "media"
+
+
+
+
+
