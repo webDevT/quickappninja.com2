@@ -9,7 +9,6 @@ body
 	margin: 0 
 	padding: 0
 	position: relative
-	padding-bottom: 100.938vw
 	min-height: 100vw
 .container
 	max-width: 90%
@@ -113,12 +112,13 @@ input[type="submit"]
 	transform: translate(-35%, -25%)
 	font-family: 'Nunito', sans-serif
 	font-weight: 700
+	z-index: 2
 .button,
 .button a 
 	color: #fff 
 	background: $aqua
 	display: inline-block
-	padding: 3vw 10vw
+	padding: 3vw 5vw
 	border-radius: 1vw
 	font-family: $nunito
 	font-weight: 600
@@ -334,7 +334,7 @@ h2.main-screen__text.sm
 	margin-bottom: 4vw
 .how-it-works__item
 	padding-top: 10vw
-	
+
 .how-it-works__text 
 	max-width: 60vw
 	margin: 0 auto
@@ -350,7 +350,7 @@ h2.main-screen__text.sm
 .features
 	text-align: center
 	padding-top: 0vw 
-	padding-bottom: 10vw
+	//padding-bottom: 10vw
 .features__item-wrapper
 	//display: flex
 	text-align: left
@@ -380,7 +380,7 @@ h2.main-screen__text.sm
 
 // start Showcase style
 .showcase
-	padding-bottom: 14vw
+	//padding-bottom: 14vw
 .showcase__items
 	display: flex 
 	flex-wrap: wrap 
@@ -619,10 +619,12 @@ h2.main-screen__text.sm
 	display: flex
 	margin-bottom: 1vw
 	justify-content: center
+	align-items: center
 	img:first-child  
 		width: 17vw
 	img:last-child 
 		width: 30vw
+		max-height: 12vw
 .copy 
 	color: #bbc3c9
 	font-size: 3vw
@@ -857,7 +859,7 @@ h2.main-screen__text.sm
 		font-weight: 600
 .reg__login
 	text-align: center 
-	margin-bottom: 10vw
+	//margin-bottom: 10vw
 	a 
 		color: $aqua 
 		font-weight: 600
@@ -983,8 +985,22 @@ h2.main-screen__text.sm
 		margin-left: 2vw 
 	img 
 		width: 11vw
-.row-two-col .item-box.item-box--top.item-box--grey .item-box__row.item-box__row--demo
-	justify-content: center
+.main-screen h2.how-it-works-title
+	margin-bottom: 0
+.body-padding
+	padding-top: 122vw
+.table__row
+	overflow: hidden
+.animated
+	animation-duration: 1s
+	animation-fill-mode: both
+@keyframes fadeIn
+	from
+		opacity: 0
+	to
+		opacity: 1
+.fadeIn
+	animation-name: fadeIn
 @import "media"
 
 
